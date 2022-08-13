@@ -1,0 +1,7 @@
+There are 6 words:						There are 6 words:
+1 hello								1 hello
+2 world								2 world
+3 this								3 this
+4 is								4 is
+5 a								5 a
+6 test								6 test
