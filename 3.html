@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Übung 3</title>
+<style>
+body {
+    margin: 30px auto;
+    max-width: 600px;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: Arial;
+}
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0 40px 0 40px;
+}
+h2 {
+    margin: 60px 0 20px 0;
+}
+.table-header-row {
+    border-bottom: 2px solid black;
+}
+.table-footer-row {
+    border-top: 2px solid black;
+}
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.monospace {
+    font-family: monospace;
+}
+code {
+    border-radius: 5px;
+    padding: 3px 8px 3px 8px;
+    background-color: lightgray;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    font-size: 85%;
+}
+.code {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    padding: 15px;
+    background-color: lightgray;
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 11px;
+}
+.green {
+    color: #32a852;
+}
+.red {
+    color: #ff0000;
+}
+.orange {
+    color: #fa9e0c;
+}
+.overflow {
+    margin: 15px;
+    display: flex;
+    /*justify-content: center;*/
+}
+</style>
+</head>
+<body>
+<h1 class="center">Übung 3</h1>
+<h2 class="center">Zusammenfassung</h2>
+<table>
+<tr class="table-header-row"><th class="left">Aufgabe</th><th class="right">Bestanden</th></tr>
+<tr><td style="font-family:monospace">structs</td><td class="right green"><b>Ja ✓ 😄</b></td>
+<tr><td style="font-family:monospace">words</td><td class="right green"><b>Ja ✓ 😄</b></td>
+<tr><td style="font-family:monospace">books</td><td class="right red"><b>Nein ✗</b></td>
+<tr class="table-footer-row"><td><b>Summe</b></td><td class="right"><b>2 / 3</b></td></tr>
+
+</table>
+<h2>Aufgabe structs</h2>
+<div><b>Bestanden: <span class="green">Ja ✓ 😄</span></b></div>
+<div>Die Tests für diese Aufgabe liefen fehlerfrei durch.
+</div>
+<div>Auf der Standardausgabe wurde folgender Text ausgegeben:
+</div>
+<div> <div class="overflow"><div class="code">./codestyle.py<br>  1: Checking code style of exam.c<br>  2: Checking code style of date.c<br>  3: Checking code style of exam.h<br>  4: Checking code style of date.h<br>  5: Checking code style of date_tests.ts<br>  6: Checking code style of exam_tests.ts<br><br>gcc -std=c99 -Og -g -Wall -Wextra -Werror   -c -o date.o date.c<br>checkmk date_tests.ts &gt; date_tests.c<br>gcc -std=c99 -Og -g -Wall -Wextra -Werror   -c -o date_tests.o date_tests.c<br>gcc -o date_tests date.o date_tests.o -fsanitize=address -fsanitize=undefined -pthread -lcheck_pic -pthread -lrt -lm -lsubunit<br><br>./date_tests<br>Running suite(s): Core<br>100%: Checks: 13, Failures: 0, Errors: 0<br><br>gcc -std=c99 -Og -g -Wall -Wextra -Werror   -c -o exam.o exam.c<br>checkmk exam_tests.ts &gt; exam_tests.c<br>gcc -std=c99 -Og -g -Wall -Wextra -Werror   -c -o exam_tests.o exam_tests.c<br>gcc -o exam_tests exam.o date.o exam_tests.o -fsanitize=address -fsanitize=undefined -pthread -lcheck_pic -pthread -lrt -lm -lsubunit<br><br>./exam_tests<br>Running suite(s): Core<br>100%: Checks: 4, Failures: 0, Errors: 0<br><br>rm exam_tests.c date_tests.c date_tests.o</div></div></div>
+<div></div>
+<h2>Aufgabe words</h2>
+<div><b>Bestanden: <span class="green">Ja ✓ 😄</span></b></div>
+<div>Die Tests für diese Aufgabe liefen fehlerfrei durch.
+</div>
+<div>Auf der Standardausgabe wurde folgender Text ausgegeben:
+</div>
+<div> <div class="overflow"><div class="code">  1: Checking code style of words.c<br>  2: Checking code style of main.c<br>  3: Checking code style of words.h<br><br>OK: expected_output1.txt matches output1.txt.<br>OK: expected_output2.txt matches output2.txt.<br>OK: expected_output3.txt matches output3.txt.<br>OK: expected_output4.txt matches output4.txt.<br>OK: The program does not crash with a long word as input.<br>	OK: Speichertest 1.<br>	OK: Speichertest 2.<br>	OK: Speichertest 3.<br>	OK: Speichertest 4.<br>	OK: Speichertest 5.<br>	OK: Invalid free test.<br>	OK: Invalid read test.<br>	OK: Invalid write test.<br>	OK: Nur initialisierte Variablen verwendet (zumindest laut valgrind).<br>	OK: Speichertest 1.<br>	OK: Speichertest 2.<br>	OK: Speichertest 3.<br>	OK: Speichertest 4.<br>	OK: Speichertest 5.<br>	OK: Invalid free test.<br>	OK: Invalid read test.<br>	OK: Invalid write test.<br>	OK: Nur initialisierte Variablen verwendet (zumindest laut valgrind).<br>	OK: Speichertest 1.<br>	OK: Speichertest 2.<br>	OK: Speichertest 3.<br>	OK: Speichertest 4.<br>	OK: Speichertest 5.<br>	OK: Invalid free test.<br>	OK: Invalid read test.<br>	OK: Invalid write test.<br>	OK: Nur initialisierte Variablen verwendet (zumindest laut valgrind).<br>	OK: Speichertest 1.<br>	OK: Speichertest 2.<br>	OK: Speichertest 3.<br>	OK: Speichertest 4.<br>	OK: Speichertest 5.<br>	OK: Invalid free test.<br>	OK: Invalid read test.<br>	OK: Invalid write test.<br>	OK: Nur initialisierte Variablen verwendet (zumindest laut valgrind).</div></div></div>
+<div></div>
+<h2>Aufgabe books</h2>
+<div><b>Bestanden: <span class="red">Nein ✗</span></b></div>
+<div>Die Aufgabe wurde nicht bearbeitet.</div></body>
+</html>
+
